@@ -1213,7 +1213,7 @@ res.forEach(function(el){
   contar[0].innerHTML += "<li>" + el.title +"<br">+</li>;
 });
 
-function agregraTareas(){
+function agregrar(){
   var input=document.getElementsById("tarea");
 var contar=document.getElementsByClassName("list");
   contar[0].innerHTML +="<li>" + input.value+"</li>";
