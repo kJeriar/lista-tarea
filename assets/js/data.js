@@ -1202,42 +1202,27 @@ var res=
   }
 ]
 //arreglo de los primeros 10
-
-var listadoDiez=user.slice(0,10);
-
-function imprimir() {
-    var listaDeTareas = document.getElementById('tareas');
-    //l HTML
-    listadoTareas.innerHTML = '';
-    var nuevoHtml = '';
-    newArray.forEach(function(tarea) {
-        //de a una
-        console.log(tarea);
-        nuevoHtml += '<li>' + tarea.title + '</li>';
-    });
-
-    tareas.innerHTML = nuevoHtml;
+for(var i=0;i<11;i++){
+  res.push(arr[i]);
 }
 
-imprimir();
+console.log(res);
 
+res.forEach(function(el){
+  var contar=document.getElementsByClassName("list");
+  contar[0].innerHTML += "<li>" + el.title +"<br">+</li>;
+});
 
-//agregar una nueva tarea
-function agregar() {
-   
-    var nuevosDatos = document.getElementById('tarea-agregada').value;
-    var textoIngresado = nuevosDatos;
-    //hacemos la funcion para agregar y con un push lo metemos al listado
-
-    listadoDiez.push({
-      'userId':10,
-      'title':textoIngresado,
-      'completed':false
-    });
-
-
-    textoIngresado = '';
-   
-    imprimir();
+function agregraTareas(){
+  var input=document.getElementsById("tarea");
+var contar=document.getElementsByClassName("list");
+  contar[0].innerHTML +="<li>" + input.value+"</li>";
+res.push({
+  "Id":res.length,
+  "userId"=1,
+  "title"=input.value,
+  "completed"=false
+});
+  console.log(res);
+  input.value="";
 }
-
