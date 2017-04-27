@@ -1,23 +1,8 @@
-function cambiarGato(){
-	var contenedor = document.getElementById("contenedor-gatos");
-	var numRandom = Math.floor(Math.random() * res.data.length);
 
-	contenedor.innerHTML = '<img src="' + res.data[numRandom].images.downsized.url + '">';
-}
-
-function masTarea(){
-
-	
-}
-
-function obtenerEmail(){
-	var input = document.getElementById("email");
-
-	var contEmail = document.getElementsByClassName("email-list");
-
-	contEmail[0].innerHTML += input.value +"<br>";
-
-	input.value = "";
-}
-
-cambiarGato();
+//function listarTareas(){
+  //var listado=document.getElementById("listarT")
+//hago un arreglo con for para imprimir las 10 primeras tareas
+//document.write('<div> <h1> Las tareas son: </h1></div>');
+//for (var i = 0; i <res[11]; i++) {
+ // listado.innerHTML += "<li>" + res[i].title + "</li>";
+  //  document.write("<div><li>" + res[i].title + "</div></li>");
