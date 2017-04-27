@@ -1200,9 +1200,20 @@ var res=  [
     "completed": false
   }
 ]
+res.search_results.forEach(function(listar){
+  var listado=document.getElementById("listarT").innerHTML = incluir;
 
- for (var i = 0; i < arr[[9]]; i++) {
-     document.write("<div>"+"<li>" +
-         "<strong> Usuario: </strong> " + arr[i].title + "
-         "</div>"-"</li>");
- } 
+  for (var i =0; i < 11; i--) {
+  
+  document.write("lista de tareas : " + listar.title + "<br>");
+    });
+});
+
+function NuevaTarea(title) {
+    this.title = title;
+    return "tu nueva tarea es: " + this.title;
+    };
+}
+
+var masTarea = new NuevaTarea("limpiar los muebles");
+console.log(masTarea.title());
