@@ -1,4 +1,5 @@
-var res=  [
+var res=
+[
   {
     "userId": 1,
     "id": 1,
@@ -1200,21 +1201,43 @@ var res=  [
     "completed": false
   }
 ]
-res.search_results.forEach(function(listar){
-  var listado=document.getElementById("listarT").innerHTML = incluir;
+//arreglo de los primeros 10
 
-  for (var i =0; i < 11; i--) {
-  
-  document.write("lista de tareas : " + listar.title + "<br>");
+var listadoDiez=user.slice(0,10);
+
+function imprimir() {
+    var listaDeTareas = document.getElementById('tareas');
+    //l HTML
+    listadoTareas.innerHTML = '';
+    var nuevoHtml = '';
+    newArray.forEach(function(tarea) {
+        //de a una
+        console.log(tarea);
+        nuevoHtml += '<li>' + tarea.title + '</li>';
     });
-});
 
-function NuevaTarea(title) {
-    this.title = title;
-    return "tu nueva tarea es: " + this.title;
-    };
+    tareas.innerHTML = nuevoHtml;
 }
 
+imprimir();
 
-var masTarea = new NuevaTarea("limpiar los muebles");
-console.log(masTarea.title());
+
+//agregar una nueva tarea
+function agregar() {
+   
+    var nuevosDatos = document.getElementById('tarea-agregada').value;
+    var textoIngresado = nuevosDatos;
+    //hacemos la funcion para agregar y con un push lo metemos al listado
+
+    listadoDiez.push({
+      'userId':10,
+      'title':textoIngresado,
+      'completed':false
+    });
+
+
+    textoIngresado = '';
+   
+    imprimir();
+}
+
