@@ -1215,5 +1215,6 @@ function NuevaTarea(title) {
     };
 }
 
+
 var masTarea = new NuevaTarea("limpiar los muebles");
 console.log(masTarea.title());
